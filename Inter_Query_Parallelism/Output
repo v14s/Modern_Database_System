@@ -1,0 +1,65 @@
+server.py
+PS C:\Users\User\Desktop\verticle> python server.py 
+Actual Table
+(1, 'A', 'CSE', '8.0')
+(2, 'B', 'CSE', '8.3')
+(3, 'A', 'IT', '8.6')
+(4, 'A', 'IT', '5.3')
+(5, 'B', 'IT', '7.8')
+(6, 'A', 'ENTC', '5.0')
+(7, 'B', 'ENTC', '9.0')
+(8, 'B', 'CSE', '9.7')
+(9, 'B', 'CSE', '10.0')
+(10, 'A', 'IT', '9.0')
+(11, 'B', 'CSE', '10.0')
+(12, 'B', 'CSE', '7.5')
+(13, 'A', 'IT', '7.0')
+(14, 'B', 'ENTC', '6.0')
+(15, 'B', 'ENTC', '8.0')
+Server is listing on the port 1233...
+Connected to: 127.0.0.1:63074    
+Connected to: 127.0.0.1:63083    
+
+client1.py
+PS C:\Users\User\Desktop\verticle> python client1.py
+Waiting for connection
+Your message: hii
+A
+B
+Your message:
+
+client2.py
+PS C:\Users\User\Desktop\verticle> python client2.py
+Waiting for connection
+Your message: hii
+9 B CSE 10.0
+8 B CSE 9.7
+7 B ENTC 9.0
+10 A IT 9.0
+7 B ENTC 9.0
+10 A IT 9.0
+6 A ENTC 5.0
+Your message:
+
+table:
+mysql> SELECT * FROM STUDENT1;
++------+-------+----------+--------+
+| s_id | s_div | s_branch | s_cgpa |
++------+-------+----------+--------+
+|    1 | A     | CSE      | 8.0    |
+|    2 | B     | CSE      | 8.3    |
+|    3 | A     | IT       | 8.6    |
+|    4 | A     | IT       | 5.3    |
+|    5 | B     | IT       | 7.8    |
+|    6 | A     | ENTC     | 5.0    |
+|    7 | B     | ENTC     | 9.0    |
+|    8 | B     | CSE      | 9.7    |
+|    9 | B     | CSE      | 10.0   |
+|   10 | A     | IT       | 9.0    |
+|   11 | B     | CSE      | 10.0   |
+|   12 | B     | CSE      | 7.5    |
+|   13 | A     | IT       | 7.0    |
+|   14 | B     | ENTC     | 6.0    |
+|   15 | B     | ENTC     | 8.0    |
++------+-------+----------+--------+
+15 rows in set (0.00 sec)

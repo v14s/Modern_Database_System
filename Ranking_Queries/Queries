@@ -1,0 +1,21 @@
+Q. To perform Ranking on given dataset.
+
+mysql> create table sale(Rownum integer, Name varchar(20), Region varchar(20), Sales integer);
+
+mysql> select * from sale;
+
+mysql> select Rownum as 'rank', Name, Region, Sales from (select Rownum, Name, region, sum(Sales) as Sales from sale group by Name, Region order by sum(Sales) DESC) as sale_record where Rownum <= 10;
+
+
+MySQL Rank() Query :
+
+If we partition by name as well as region then query be like  :
+
+mysql> select Rownum, Name, Region, Sales, rank() over (partition by Name, Region order by Sales desc) as 'rank' from sale;
+
+
+
+If we partition by region then ranking be like :
+
+mysql> select Rownum, Name, Region, Sales, rank() over (partition by Region order by Sales desc) as 'rank' from sale;
+

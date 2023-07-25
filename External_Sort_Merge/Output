@@ -1,0 +1,14 @@
+server.py
+PS C:\Users\User\Desktop\verticle> python server.py 
+Socket is listening..
+Connected to: 192.168.43.168:63656
+Thread Number: 1
+sent data to client :  [3, 2, 1]
+client response :  [1, 2, 3]
+
+client.py
+LAPTOP-LGU496QSReceived from server:
+[3, 2, 1]
+send
+[3, 2, 1]
+[1, 2, 3]

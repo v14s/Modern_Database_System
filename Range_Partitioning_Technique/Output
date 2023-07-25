@@ -1,0 +1,33 @@
+server.py
+PS C:\Users\User\Desktop\verticle> python server.py
+Server is listing on the port 1233...
+Connected to: 127.0.0.1:62250    
+Connected to: 127.0.0.1:62252
+
+client1.py
+PS C:\Users\User\Desktop\verticle> python client1.py
+Waiting for connection
+Your message: hii
+1 Solapur 7839207832 2 2
+
+client2.py
+PS C:\Users\User\Desktop\verticle> python client2.py
+Waiting for connection
+Your message: hii
+2 Solapur 8490328328 5 1        
+3 Kolhapur 9990328328 4 3       
+4 Solapur 9583757284 3 2        
+5 Kashmir 7429579322 3 1
+
+table:
+mysql> select * from student;
++------+----------+-------------+---------+------+
+| s_id | s_addr   | s_mobile_no | dept_id | c_id |
++------+----------+-------------+---------+------+
+|    1 | Solapur  | 7839207832  |       2 |    2 |
+|    2 | Solapur  | 8490328328  |       5 |    1 |
+|    3 | Kolhapur | 9990328328  |       4 |    3 |
+|    4 | Solapur  | 9583757284  |       3 |    2 |
+|    5 | Kashmir  | 7429579322  |       3 |    1 |
++------+----------+-------------+---------+------+
+5 rows in set (0.00 sec)

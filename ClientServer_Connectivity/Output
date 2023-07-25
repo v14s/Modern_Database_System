@@ -1,0 +1,25 @@
+Server side:
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+PS C:\Users\User\Downloads\MDS> python Server.py
+Successfully Connected...
+Connection from: ('192.168.43.168', 52513)
+from connected user: hello...
+ -> hiii...
+from connected user: how are you ?
+ -> i am fine
+from connected user: ok.. good
+ -> byee..
+
+Client side :
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+PS C:\Users\User\Downloads\MDS> python Client.py
+ -> hello...
+Received from server: hiii...
+ -> how are you ?
+Received from server: i am fine
+ -> ok.. good
+Received from server: byee..

@@ -1,0 +1,18 @@
+Q. Create Sales Table and Apply RollUp, Drill-Down, Slice and Dice, pivot and GroupBy queries on SALES database.
+
+mysql> create table sales(item_name varchar(20), color varchar(20), clothes_size varchar(20), quantity int);
+
+mysql> select * from sales;
+
+mysql> select item_name , color, sum(quantity) from sales group by cube(item_name, color);
+
+mysql> select item_name, sum(quantity) from sales where item_name = 'skirt';
+
+mysql> select item_name, sum(quantity) from sales group by item_name;
+
+mysql> select sum(quantity) from sales group by color;
+
+mysql> select item_name,color,clothes_size,sum(quantity)from sales group by rollup (item_name,color,clothes_size);
+
+mysql> select item_name,color,clothes_size,sum(quantity)from sales group by rollup (item_name,color,clothes_size); 
+
